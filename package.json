@@ -9,6 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "inquire": "^0.4.8",
     "inquirer": "8.2.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeviousDoge/readme-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DeviousDoge/readme-generator/issues"
+  },
+  "homepage": "https://github.com/DeviousDoge/readme-generator#readme"
 }
