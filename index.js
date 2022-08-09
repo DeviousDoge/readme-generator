@@ -7,57 +7,58 @@ inquirer
   // TODO: Create an array of questions for user input
  const questions = [
     {
-      type: 
-      message:
-      name:
+      type: "input",
+      message: "Please give us your project name.",
+      name: "title", 
          },
     {
-       type:
-       message:
-       name:
+       type: "input",
+       message: "Please describe your project in sufficient detail.",
+       name: "description",
          },
     {
-      type:
-      message:
-      name:
+      type: "input",
+      message: "How does one install your application?",
+      name: "installation",
          },    
     {
-       type:
-       message:
-       name:
+       type: "input",
+       message: "How does one use your application?",
+       name: "usage",
          },    
     {
-      type:
-      message:
-      name:
+      type: "checkbox",
+      message: "What License do you plan to use for this project?",
+      choices: ["MIT", "GNU General Public License 2.0", "Apache License 2.0", "GNU General Public License 3.0", "None"],
+      name: "license",
          }, 
     {
-       type:
-       message:
-       name:
+       type: "input",
+       message: "How can we help contribute?",
+       name: "contribution",
          },
     {
-      type:
-      message:
-      name:
+      type: "input",
+      message: "How can people test this project?",
+      name: "test",
          },
     {
-       type:
-       message:
-       name:
+       type: "input",
+       message: "Plug your github!",
+       name: "github",
          },
     {
-      type:
-      message:
-      name:
+      type: "input",
+      message: "Plug your email!",
+      name: "email",
          },
  ];
-
+ 
   // TODO: Create a function to write README file
  function writeToFile(fileName, data) {}
 
   // TODO: Create a function to initialize app
  function init() {}
 
-// Function call to initialize app
+  // Function call to initialize app
 init();
