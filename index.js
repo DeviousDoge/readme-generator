@@ -1,7 +1,4 @@
-const inquirer = require("inquirer");
-const fs = require("fs");
-const generate = require('./utils/generateMarkdown.js');
-const path = require('path');
+
 // TODO: Include packages needed for this application
 
   // TODO: Create an array of questions for user input
@@ -54,18 +51,28 @@ const path = require('path');
          },
  ];
  
-  // TODO: Create a function to write README file
- function writeToFile(fileName, data) {
-    fs.writeFileSync(path.join (process.cwd(), "Readme.md"), generate(response));
- }
-
+ 
   // TODO: Create a function to initialize app
  function init() {
+    const inquirer = require("inquirer");
+    const fs = require("fs");
+    const generate = require("./utils/generateMarkdown.js");
+    // const path = require("path");
+
+    // function writeToFile(fileName, data) {
+    //     fs.writeFileSync(path.join (process.cwd(), "Readme.md"), generate());
+    //  }
+
     inquirer
-    .prompt(questions)
-    .then((response) => {
-      return writeToFile();
-    });
+        .prompt(questions)
+        .then(function(answers) {
+          const createMarkdown = generate(answers)
+          fs.writeFile('readme.md', createMarkdown, (err) =>
+          err ? console.log(err) : console.log('Successfully created readme!')
+          );
+
+          // return writeToFile(answers);
+        });
  }
 
   // Function call to initialize app
