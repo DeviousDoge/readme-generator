@@ -13,7 +13,7 @@ This project was my first non-web application. It is designed primarily for myse
 ## Installation
 Clone the app or download it directly from github. Install node.js. Open your terminal and change the directory to readme-generator. Run the command node index.js and follow the prompts. Your new readme.md will populate in the readme-generator directory. Save the file somewhere else or you risk easily overwriting it. 
 ## Usage
-Watch this video for a more in depth breakdown of the user experience of this app. https://www.youtube.com/watch?v=l1ZNiVEwrjM&ab_channel=DeviousDoge
+Watch this video for a more in depth breakdown of the user experience of this app. https://www.youtube.com/watch?v=Ad3Xj6-W0oU&ab_channel=DeviousDoge
 ## Contribution
 You can reach out to me @ my links
 ## Test
