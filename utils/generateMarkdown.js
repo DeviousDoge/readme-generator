@@ -1,5 +1,4 @@
-
-
+//define content depending on the license selection
 function renderLicenseLink(license) {
   console.log(license)
  if (license === 'Apache') {
@@ -55,6 +54,5 @@ ${github}
 ## E-mail
 ${email}
 `;
-
-// ${renderLicenseLink(license)}
+//send off the function itself when this script is referenced. 
 module.exports = generateMarkdown;

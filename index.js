@@ -65,7 +65,7 @@ const { title } = require("process");
           //call generateMarkdown and use parameters from the prompt response
           const createMarkdown = generate(answers)
           //make a file named readme.md  with its contents containing the contents defined in generate markdown and the responses the user chose in the prompt.
-          fs.writeFile('readme.md', createMarkdown, (err) =>
+          fs.writeFile('README.md', createMarkdown, (err) =>
           //console log to let the user know it worked.
           err ? console.log(err) : console.log('Successfully created readme! Save this readme somewhere else so it doesnt get lost.')
           );
