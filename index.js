@@ -1,7 +1,6 @@
+const { title } = require("process");
 
-// TODO: Include packages needed for this application
-
-  // TODO: Create an array of questions for user input
+//questions to use in the inquire prompt
  const questions = [
     {
       type: "input",
@@ -20,13 +19,13 @@
          },    
     {
        type: "input",
-       message: "How does one use your application?",
+       message: "How does one use your application? If you wish to include screenshots here, remember the syntax for images is ![Title](/path/image.png)",
        name: "usage",
          },    
     {
-      type: "checkbox",
+      type: "list",
       message: "What License do you plan to use for this project?",
-      choices: ["MIT", "GNU General Public License 2.0", "Apache License 2.0", "GNU General Public License 3.0", "None"],
+      choices: ["Apache", "IBM", "MIT", "Mozilla", "Open Data Commons", "PERL", "None"],
       name: "license",
          }, 
     {
@@ -50,30 +49,27 @@
       name: "email",
          },
  ];
- 
- 
-  // TODO: Create a function to initialize app
+  //function that runs after node index.js
  function init() {
+    //packets
     const inquirer = require("inquirer");
     const fs = require("fs");
+    //taking generateMarkdown results from the other page
     const generate = require("./utils/generateMarkdown.js");
-    // const path = require("path");
-
-    // function writeToFile(fileName, data) {
-    //     fs.writeFileSync(path.join (process.cwd(), "Readme.md"), generate());
-    //  }
-
+    //inquirer being called
     inquirer
+        //prompt user to answer questions based on the array
         .prompt(questions)
+        //then run a series of functions
         .then(function(answers) {
+          //call generateMarkdown and use parameters from the prompt response
           const createMarkdown = generate(answers)
+          //make a file named readme.md  with its contents containing the contents defined in generate markdown and the responses the user chose in the prompt.
           fs.writeFile('readme.md', createMarkdown, (err) =>
-          err ? console.log(err) : console.log('Successfully created readme!')
+          //console log to let the user know it worked.
+          err ? console.log(err) : console.log('Successfully created readme! Save this readme somewhere else so it doesnt get lost.')
           );
-
-          // return writeToFile(answers);
         });
  }
-
   // Function call to initialize app
 init();
