@@ -1,4 +1,4 @@
-# Readme Generator 
+# Employee Tracker This Project is Unlicensed.
   ## Table of Contents:
   1. [Description](#description) 
   2. [Installation](#installation)
@@ -9,18 +9,18 @@
   7. [GitHub](#github)
   8. [E-mail](#e-mail)
 ## Description
-This project was my first non-web application. It is designed primarily for myself in order to streamline and standardize the process of writing out README.md files. This app is made using node.js and the details of how the javscript worked are layed out in detail in the sourcecode. The readme itself has been made using this app. The app is entirely console-based, and node.js will need to be installed. Answer a series of prompts to in the terminal to create an entire readme without any need to manually mess with markdown nonsense. The file will be named 'README.md' when created, not the name of the title because thats the convention for readmes. The readme for this directory will not be lost after the first readme is generated. A backup is safe and secure in the 'official readme' folder. You would have to go out of your way to delete that. 
+This app allows you to view and edit a workplace database. There are three tables, for departments, roles, and employees, each referencing eachother. This app is powered by inquire and requires node.js to function.  
 ## Installation
-Clone the app or download it directly from github. Install node.js. Open your terminal and change the directory to readme-generator. Run the command node index.js and follow the prompts. Your new readme.md will populate in the readme-generator directory. Save the file somewhere else or you risk easily overwriting it. 
+After downloading or cloning this app from github, and after ensuring node.js is installed, open the app in your terminal and run the following commands. npm install, npm install console.table, npm install express, npm install inquirer@8.2.4, npm install mysql2, mysql -u root -p, source schema.sql, quit. To run the app, run node index.js. To clear  the default database, delete seeds.sql.
 ## Usage
-Watch this video for a more in depth breakdown of the user experience of this app. https://www.youtube.com/watch?v=Ad3Xj6-W0oU&ab_channel=DeviousDoge
+https://www.youtube.com/watch?v=zTNS3bOcgK0
 ## Contribution
-You can reach out to me @ my links
+Feel free to fork
 ## Test
-Feel free to fork this project and do whatever you want with it. I will look at your pull requests.
+by cloning from the rep
 ## License
 This Project is Unlicensed. None
 ## GitHub
 https://github.com/DeviousDoge
 ## E-mail
-pdillon0@gmail.com
+
